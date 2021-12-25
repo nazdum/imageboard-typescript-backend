@@ -8,6 +8,8 @@ class Server {
     this.config();
   }
 
+  getExpressApplication = (): express.Application => this._app;
+
   private config = (): void => {
     const defineEnvironment = new DefineEnvironment();
     const environmentPort = defineEnvironment.getCurrentEnvironment().getPort();
